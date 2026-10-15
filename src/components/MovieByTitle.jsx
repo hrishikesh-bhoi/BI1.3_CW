@@ -2,7 +2,7 @@ import useFetch from "../useFetch";
 
 const MovieByTitle = ({title}) => {
 
-    const { data, loading, error } = useFetch(`${import.meta.env.VITE_API_URL}/movies/${title}`);
+    const { data, loading, error } = useFetch(`https://be-4-4-cw-ten.vercel.app/movies/${title}`);
 
     console.log(data);
 

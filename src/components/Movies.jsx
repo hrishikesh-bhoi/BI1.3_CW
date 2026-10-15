@@ -5,14 +5,14 @@ const Movies = () => {
 
     const [ successMessage, setSuccessMessage ] = useState("");
 
-    const { data, loading, error } = useFetch(`http://localhost:3000/movies`);
+    const { data, loading, error } = useFetch(`${import.meta.env.VITE_API_URL}/movies`);
 
     // console.log(data);
 
     const handleDelete = async (movieId) => {
         try {
 
-            const response = await fetch(`http://localhost:3000/movies/${movieId}`, 
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/movies/${movieId}`, 
                 {
                 method: "DELETE"
             },

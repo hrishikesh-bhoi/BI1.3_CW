@@ -5,14 +5,14 @@ const Movies = () => {
 
     const [ successMessage, setSuccessMessage ] = useState("");
 
-    const { data, loading, error } = useFetch(`http://localhost:3000/movies`);
+    const { data, loading, error } = useFetch(`https://be-4-4-cw-ten.vercel.app/movies`);
 
     // console.log(data);
 
     const handleDelete = async (movieId) => {
         try {
 
-            const response = await fetch(`http://localhost:3000/movies/${movieId}`, 
+            const response = await fetch(`https://be-4-4-cw-ten.vercel.app/movies/${movieId}`, 
                 {
                 method: "DELETE"
             },
